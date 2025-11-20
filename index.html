@@ -8,21 +8,30 @@
 </head>
 <body>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop">↑</button>
+
     <!-- Navigation -->
     <nav>
         <h2 class="logo">Suwarna</h2>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#slider">Slider</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggle">🌙</button>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
         <h1>Hi, I'm <span>Suwarna Bista</span></h1>
         <p>Aspiring Web Developer | Designer | Learner</p>
-        <a href="#projects" class="btn">View My Work</a>
+        <a class="btn">View My Work</a>
     </header>
 
     <!-- About Section -->
@@ -30,43 +39,117 @@
         <h2>About Me</h2>
         <p>
             I am a passionate learner who loves designing, coding, and creating digital experiences.
-            I enjoy working with HTML, CSS, and experimenting with different UI ideas. 
-            This portfolio is part of my workshop project, fully built using HTML, CSS, and GitHub Pages.
+            I enjoy working with HTML, CSS, and experimenting with different UI ideas.
         </p>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2>Projects</h2>
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+        <h2>My Skills</h2>
 
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Weather App</h3>
-                <p>A dynamic weather app built using API integration and clean UI.</p>
+        <div class="skill">
+            <p>HTML</p>
+            <div class="skill-bar">
+                <div class="skill-level" data-level="90%"></div>
             </div>
+        </div>
 
-            <div class="project-card">
-                <h3>Finance Tracker</h3>
-                <p>A Flutter-based finance app that helps track daily transactions.</p>
+        <div class="skill">
+            <p>CSS</p>
+            <div class="skill-bar">
+                <div class="skill-level" data-level="80%"></div>
             </div>
+        </div>
 
-            <div class="project-card">
-                <h3>Unity Mini Game</h3>
-                <p>A simple game developed as part of my final semester project.</p>
+        <div class="skill">
+            <p>JavaScript</p>
+            <div class="skill-bar">
+                <div class="skill-level" data-level="60%"></div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card" data-link="https://your-weather-app-link.com">
+                <h3>Weather App</h3>
+                <p>A dynamic weather app built using API.</p>
+            </div>
+
+            <div class="project-card" data-link="https://your-finance-tracker.com">
+                <h3>Finance Tracker</h3>
+                <p>A Flutter-based finance app.</p>
+            </div>
+
+            <div class="project-card" data-link="https://your-unity-game.com">
+                <h3>Unity Mini Game</h3>
+                <p>A simple 2D Unity game.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MEDIA: VIDEO, AUDIO, CANVAS -->
+    <section id="media" class="section">
+        <h2>Media Section</h2>
+
+        <video width="400" controls>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <audio controls>
+            <source src="audio.mp3" type="audio/mp3">
+        </audio>
+
+        <canvas id="myCanvas" width="300" height="200"></canvas>
+    </section>
+
+    <!-- IMAGE SLIDER -->
+    <section id="slider" class="section">
+        <h2>Image Slider</h2>
+
+        <div class="slider-container">
+            <img id="slideImage" src="slide1.jpg">
+            <button id="prevBtn">←</button>
+            <button id="nextBtn">→</button>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
     <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>If you want to collaborate or contact me, feel free to reach out!</p>
-        <p>Email: <strong>suwarnabista@gmail.com</strong></p>
+        <h2>Contact Me</h2>
+
+        <form id="contactForm">
+
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" id="name">
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="email">
+            </div>
+
+            <div class="input-group">
+                <label>Message</label>
+                <textarea id="message"></textarea>
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+            <p id="formMessage"></p>
+
+        </form>
     </section>
 
     <footer>
         <p>© 2025 Suwarna Bista | Portfolio Website</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
